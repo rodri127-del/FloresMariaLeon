@@ -131,13 +131,13 @@ body {
     color: #333;
 }
 
-.botones-copiar {
+.botones-accion {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
 }
 
-.btn-copiar {
+.btn-copiar, .btn-compartir {
     background: #6c757d;
     color: white;
     border: none;
@@ -145,11 +145,21 @@ body {
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.2s;
+    font-size: 14px;
 }
 
 .btn-copiar:hover {
     background: #5a6268;
 }
+
+.btn-compartir {
+    background: #25D366; /* Color verde de WhatsApp */
+}
+
+.btn-compartir:hover {
+    background: #1da851;
+}
+
 
 .informe-contenido {
     background: white;
@@ -184,7 +194,14 @@ body {
         align-items: stretch;
     }
     
-    .botones-copiar {
-        justify-content: center;
+   /* Responsive */
+@media (max-width: 768px) {
+    .botones-accion {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-copiar, .btn-compartir {
+        width: 100%;
     }
 }
