@@ -51,6 +51,7 @@ textarea {
     font-size: 16px;
     resize: vertical;
     margin-bottom: 15px;
+    font-family: inherit;
 }
 
 button {
@@ -61,11 +62,15 @@ button {
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    width: 100%;
+    transition: background 0.3s;
 }
 
 button:hover {
     background: #3a6347;
+}
+
+#generar-btn {
+    width: 100%;
 }
 
 #resultado {
@@ -80,20 +85,38 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .resultado-header h3 {
     color: #2d5a27;
 }
 
-#copiar-btn {
+.botones-copiar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-copiar {
     width: auto;
-    padding: 8px 16px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: #6c757d;
+}
+
+.btn-copiar:hover {
+    background: #5a6268;
 }
 
 .resultado-texto {
     white-space: pre-wrap;
     line-height: 1.8;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #4a7c59;
 }
 
 .hidden {
@@ -104,4 +127,20 @@ button:hover {
     text-align: center;
     padding: 20px;
     color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .resultado-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .botones-copiar {
+        justify-content: center;
+    }
 }
