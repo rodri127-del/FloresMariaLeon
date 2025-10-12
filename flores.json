@@ -1,0 +1,20 @@
+{
+  "flores": {
+    "wild oat": {
+      "nombre_es": "Avena Silvestre",
+      "descripcion_corta": "Para la incertidumbre vocacional y la búsqueda de propósito",
+      "uso": "Ayuda a encontrar dirección y conectar con la vocación interior"
+    },
+    "olive": {
+      "nombre_es": "Olivo", 
+      "descripcion_corta": "Para el agotamiento total del cuerpo y la mente",
+      "uso": "Restaura la fuerza, vitalidad e interés por la vida"
+    },
+    "hornbeam": {
+      "nombre_es": "Hojarazo",
+      "descripcion_corta": "Para el cansancio mental y la procrastinación",
+      "uso": "Devuelve la chispa y fortaleza mental para afrontar el día"
+    }
+    // ... las otras 35 flores
+  }
+}
