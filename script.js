@@ -42,7 +42,7 @@ class FloresBachApp {
 
     async llamarGeminiDirecto(prompt) {
         // ⚠️ PON AQUÍ TU API KEY DE GEMINI directamente
-        const apiKey = 'AIzaSyC6FeXKWkhvAmF6RPpqsuMiX4MPijB6YLs'; // 👈 REEMPLAZA ESTO
+        const apiKey = GEMINI_API_KEY; // 👈 REEMPLAZA ESTO
         
         const response = await fetch(
             `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
