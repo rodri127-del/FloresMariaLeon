@@ -1,6 +1,6 @@
 class FloresBachApp {
     constructor() {
-        this.apiKey = ''; // Tu API key
+        this.apiKey = 'GEMINI_API_KEY'; // Tu API key
         this.init();
     }
 
