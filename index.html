@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flores de Bach - Generador de Informes</title>
+    <title>Flores de Bach - Sistema Profesional</title>
     <link rel="stylesheet" href="style.css">
-    <!-- CSP MUY PERMISIVA TEMPORAL -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; connect-src *;">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>🌼 Flores de Bach</h1>
-            <p>Genera informes para tus pacientes</p>
+        <header class="app-header">
+            <h1>🌿 Flores de Bach</h1>
+            <p>Sistema profesional de generación de informes</p>
         </header>
         
-        <main>
+        <main class="main-content">
             <div class="input-section">
                 <label for="flores-input">Introduce las flores seleccionadas:</label>
                 <textarea 
@@ -23,10 +21,17 @@
                     placeholder="Ejemplo: Wild Oat, Olive, Hornbeam, Walnut"
                     rows="4"
                 ></textarea>
-                <button id="generar-btn">Generar Informe</button>
+                <button id="generar-btn" class="btn-primary">
+                    Generar Informe Profesional
+                </button>
             </div>
             
-            <div id="resultado" class="hidden">
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Generando informe profesional...</p>
+            </div>
+            
+            <div id="resultado" class="resultado-section hidden">
                 <div class="resultado-header">
                     <h3>Informe Generado:</h3>
                     <div class="botones-copiar">
@@ -35,15 +40,13 @@
                         <button class="btn-copiar" data-formato="markdown">📋 Markdown</button>
                     </div>
                 </div>
-                <div id="texto-resultado" class="resultado-texto"></div>
-            </div>
-            
-            <div id="loading" class="hidden">
-                <p>Generando informe con IA...</p>
+                <div class="informe-contenido">
+                    <pre id="texto-resultado"></pre>
+                </div>
             </div>
         </main>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
