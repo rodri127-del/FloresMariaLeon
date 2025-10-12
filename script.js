@@ -1,6 +1,6 @@
 class FloresBachApp {
     constructor() {
-        this.apiKey = 'AIzaSyC6FeXKWkhvAmF6RPpqsuMiX4MPijB6YLs'; // Tu API key
+        this.apiKey = ''; // Tu API key
         this.init();
     }
 
