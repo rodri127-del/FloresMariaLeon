@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores de Bach - Generador de Informes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌼 Flores de Bach</h1>
+            <p>Genera informes para tus pacientes</p>
+        </header>
+        
+        <main>
+            <div class="input-section">
+                <label for="flores-input">Introduce las flores seleccionadas:</label>
+                <textarea 
+                    id="flores-input" 
+                    placeholder="Ejemplo: Wild Oat, Olive, Hornbeam, Walnut"
+                    rows="4"
+                ></textarea>
+                <button id="generar-btn">Generar Informe</button>
+            </div>
+            
+            <div id="resultado" class="hidden">
+                <div class="resultado-header">
+                    <h3>Informe Generado:</h3>
+                    <button id="copiar-btn">📋 Copiar</button>
+                </div>
+                <div id="texto-resultado" class="resultado-texto"></div>
+            </div>
+            
+            <div id="loading" class="hidden">
+                <p>Generando informe con IA...</p>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
