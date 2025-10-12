@@ -27,7 +27,11 @@
             <div id="resultado" class="hidden">
                 <div class="resultado-header">
                     <h3>Informe Generado:</h3>
-                    <button id="copiar-btn">📋 Copiar</button>
+                    <div class="botones-copiar">
+                        <button class="btn-copiar" data-formato="texto">📋 Texto Plano</button>
+                        <button class="btn-copiar" data-formato="html">📋 HTML</button>
+                        <button class="btn-copiar" data-formato="markdown">📋 Markdown</button>
+                    </div>
                 </div>
                 <div id="texto-resultado" class="resultado-texto"></div>
             </div>
@@ -38,6 +42,6 @@
         </main>
     </div>
     
-    <script type="module" src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
