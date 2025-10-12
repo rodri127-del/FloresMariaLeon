@@ -9,11 +9,14 @@ class FloresBachApp {
             this.generarInforme();
         });
         
-        document.querySelectorAll('.btn-copiar').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const formato = e.target.getAttribute('data-formato');
-                this.copiarResultado(formato);
-            });
+        // Un solo botón de copiar - siempre texto plano
+        document.getElementById('btn-copiar').addEventListener('click', () => {
+            this.copiarResultado();
+        });
+        
+        // Botón de compartir por WhatsApp
+        document.getElementById('btn-compartir').addEventListener('click', () => {
+            this.compartirWhatsApp();
         });
     }
 
@@ -68,62 +71,40 @@ class FloresBachApp {
         resultadoDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    copiarResultado(formato) {
+    // SOLO TEXTO PLANO - eliminados HTML y Markdown
+    copiarResultado() {
         const textoOriginal = document.getElementById('texto-resultado').textContent;
-        let textoACopiar = textoOriginal;
-
-        if (formato === 'html') {
-            textoACopiar = this.convertirAHTML(textoOriginal);
-        } else if (formato === 'markdown') {
-            textoACopiar = this.convertirAMarkdown(textoOriginal);
-        }
-
-        navigator.clipboard.writeText(textoACopiar).then(() => {
-            this.mostrarNotificacion(`✅ Informe copiado en formato ${formato.toUpperCase()}`);
+        
+        navigator.clipboard.writeText(textoOriginal).then(() => {
+            this.mostrarNotificacion('✅ Informe copiado al portapapeles');
         }).catch(err => {
             console.error('Error al copiar:', err);
             // Fallback para navegadores antiguos
-            this.copiarFallback(textoACopiar, formato);
+            this.copiarFallback(textoOriginal);
         });
     }
 
-    convertirAHTML(texto) {
-        return texto
-            .split('\n')
-            .map(linea => {
-                if (linea.trim() === '') return '<br>';
-                if (linea.match(/^\*\*.*\*\*$/)) {
-                    // Títulos en negrita
-                    return `<h3>${linea.replace(/\*\*/g, '')}</h3>`;
-                }
-                if (linea.match(/^\*   \*\*.*\*\*:/)) {
-                    // Elementos de lista con negrita
-                    return `<li><strong>${linea.replace(/^\*   \*\*|\*\*:/g, '')}</strong>`;
-                }
-                if (linea.match(/^\*   /)) {
-                    // Elementos de lista normales
-                    return `<li>${linea.replace(/^\*   /, '')}</li>`;
-                }
-                return `<p>${linea}</p>`;
-            })
-            .join('')
-            .replace(/<li><\/li>/g, '') // Limpiar elementos vacíos
-            .replace(/(<li>.*?<\/li>)/g, '<ul>$1</ul>'); // Agrupar listas
+    compartirWhatsApp() {
+        const textoOriginal = document.getElementById('texto-resultado').textContent;
+        
+        // Codificar el texto para URL
+        const textoCodificado = encodeURIComponent(textoOriginal);
+        
+        // Crear URL de WhatsApp
+        const urlWhatsApp = `https://wa.me/?text=${textoCodificado}`;
+        
+        // Abrir en una nueva ventana
+        window.open(urlWhatsApp, '_blank', 'width=600,height=600');
     }
 
-    convertirAMarkdown(texto) {
-        return texto;
-        // El texto ya viene en un formato similar a Markdown
-    }
-
-    copiarFallback(texto, formato) {
+    copiarFallback(texto) {
         const textArea = document.createElement('textarea');
         textArea.value = texto;
         document.body.appendChild(textArea);
         textArea.select();
         try {
             document.execCommand('copy');
-            this.mostrarNotificacion(`✅ Informe copiado en formato ${formato.toUpperCase()}`);
+            this.mostrarNotificacion('✅ Informe copiado al portapapeles');
         } catch (err) {
             alert('Error al copiar. Por favor, copia manualmente.');
         }
@@ -131,7 +112,7 @@ class FloresBachApp {
     }
 
     mostrarNotificacion(mensaje) {
-        // Podríamos implementar notificaciones más elegantes aquí
+        // Notificación simple - podríamos hacerla más elegante después
         alert(mensaje);
     }
 
