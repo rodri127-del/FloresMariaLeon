@@ -1,6 +1,6 @@
 class FloresBachApp {
     constructor() {
-        this.workerUrl = 'https://flores-bach-backend.rodri127.workers.dev';
+        this.workerUrl = 'https://flores-bach-backend.rodri127.workers.dev/';
         this.init();
     }
 
