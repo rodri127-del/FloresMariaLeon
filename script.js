@@ -1,6 +1,7 @@
 class FloresBachApp {
     constructor() {
-        this.workerUrl = 'https://floresmarialeon.novaproflow.com/';
+    // ESTA DEBE SER LA URL DEL WORKER, NO DE LA WEB
+        this.workerUrl = 'https://flores-bach-backend.rodri127.workers.dev/'; 
         this.init();
     }
 
