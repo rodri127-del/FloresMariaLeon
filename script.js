@@ -3,7 +3,7 @@ class FloresBachApp {
         // 🔧 CAMBIA ESTA URL POR LA DE TU WEBHOOK DE N8N
         // Ejemplo: https://tu-dominio.com/webhook/flores-bach
         // Si tienes n8n en un puerto: http://tu-ip:5678/webhook/flores-bach
-        this.apiUrl = 'https://tu-n8n-webhook.com/webhook/flores-bach';
+        this.apiUrl = 'https://n8n.novaproflow.com/webhook/flores-bach';
         
         this.init();
     }
