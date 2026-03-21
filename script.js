@@ -1,10 +1,6 @@
 class FloresBachApp {
     constructor() {
-        // 🔧 CAMBIA ESTA URL POR LA DE TU WEBHOOK DE N8N
-        // Ejemplo: https://tu-dominio.com/webhook/flores-bach
-        // Si tienes n8n en un puerto: http://tu-ip:5678/webhook/flores-bach
         this.apiUrl = 'https://n8n.novaproflow.com/webhook/flores-bach';
-        
         this.init();
     }
 
@@ -33,7 +29,6 @@ class FloresBachApp {
             return;
         }
 
-        // Convertir el texto en un array de flores (separado por comas)
         const floresArray = floresInput.split(',').map(f => f.trim()).filter(f => f);
         
         if (floresArray.length === 0) {
@@ -69,13 +64,12 @@ class FloresBachApp {
             }
 
             this.mostrarResultado(data.informe);
-            this.mostrarNotificacion('✅ Informe generado correctamente', 'success');
+            this.mostrarNotificacion('✨ Informe generado con cariño', 'success');
             
         } catch (error) {
             console.error('Error detallado:', error);
             this.mostrarNotificacion('❌ Error al generar el informe: ' + error.message, 'error');
             
-            // Mensaje de ayuda si el error es de conexión
             if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
                 this.mostrarNotificacion('🔌 No se pudo conectar con el servidor. Verifica que n8n esté corriendo.', 'error');
             }
@@ -94,7 +88,6 @@ class FloresBachApp {
         
         if (resultadoDiv) {
             resultadoDiv.classList.remove('hidden');
-            // Scroll suave al resultado
             resultadoDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
@@ -130,7 +123,6 @@ class FloresBachApp {
             return;
         }
         
-        // Limitar el texto para WhatsApp (máximo recomendado)
         const textoLimitado = textoOriginal.length > 4000 
             ? textoOriginal.substring(0, 4000) + '...\n\n(Informe truncado por longitud)'
             : textoOriginal;
@@ -156,34 +148,12 @@ class FloresBachApp {
     }
 
     mostrarNotificacion(mensaje, tipo = 'info') {
-        // Crear elemento de notificación
         const notificacion = document.createElement('div');
         notificacion.className = `notificacion notificacion-${tipo}`;
         notificacion.textContent = mensaje;
         
-        // Estilos inline para que funcione sin CSS adicional
-        notificacion.style.cssText = `
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 12px 20px;
-            border-radius: 8px;
-            color: white;
-            font-weight: 500;
-            z-index: 1000;
-            animation: slideIn 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        `;
-        
-        // Colores según tipo
-        if (tipo === 'success') notificacion.style.backgroundColor = '#10b981';
-        else if (tipo === 'error') notificacion.style.backgroundColor = '#ef4444';
-        else if (tipo === 'warning') notificacion.style.backgroundColor = '#f59e0b';
-        else notificacion.style.backgroundColor = '#3b82f6';
-        
         document.body.appendChild(notificacion);
         
-        // Eliminar después de 3 segundos
         setTimeout(() => {
             notificacion.style.opacity = '0';
             notificacion.style.transition = 'opacity 0.3s';
@@ -205,12 +175,11 @@ class FloresBachApp {
         
         if (boton) {
             boton.disabled = mostrar;
-            boton.textContent = mostrar ? '🔄 Generando...' : 'Generar Informe Profesional';
+            boton.textContent = mostrar ? '🌿 Tejiendo tu informe...' : 'Generar Informe Profesional';
         }
     }
 }
 
-// Inicializar la aplicación cuando se carga la página
 document.addEventListener('DOMContentLoaded', () => {
     new FloresBachApp();
 });
