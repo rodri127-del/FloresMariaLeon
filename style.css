@@ -27,7 +27,7 @@ body {
     line-height: 1.7;
     background: linear-gradient(135deg, #fdf8f0 0%, #f5ede3 100%);
     min-height: 100vh;
-    padding: 20px;
+    padding: 16px;
     color: var(--text);
     font-size: 22px;
 }
@@ -35,16 +35,18 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .app-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     color: var(--text);
+    padding: 0 8px;
 }
 
 .app-header h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
     letter-spacing: -0.5px;
@@ -58,8 +60,8 @@ body {
 .app-header p {
     font-family: 'Montserrat', 'Segoe UI', sans-serif;
     font-weight: 300;
-    letter-spacing: 3px;
-    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-size: 1rem;
     text-transform: uppercase;
     color: var(--text-light);
     margin-top: 0.25rem;
@@ -69,8 +71,8 @@ body {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 1.7rem;
-    margin-top: 0.75rem;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
     color: var(--primary);
     opacity: 0.9;
 }
@@ -78,10 +80,11 @@ body {
 .main-content {
     background: var(--background-light);
     border-radius: 32px;
-    padding: 2.5rem;
+    padding: 1.8rem;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
     transition: box-shadow 0.3s ease;
+    width: 100%;
 }
 
 .main-content:hover {
@@ -89,27 +92,27 @@ body {
 }
 
 .input-section {
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
 }
 
 .input-section label {
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     font-weight: 500;
     color: var(--text);
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 0.5px;
 }
 
 .input-section textarea {
     width: 100%;
-    padding: 1.2rem 1.5rem;
+    padding: 1rem 1.2rem;
     border: 1px solid var(--border);
-    border-radius: 28px;
-    font-size: 1.3rem;
+    border-radius: 24px;
+    font-size: 1.2rem;
     resize: vertical;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     transition: all 0.3s ease;
     font-family: 'Cormorant Garamond', serif;
     background: white;
@@ -127,16 +130,16 @@ body {
     color: var(--text-light);
     opacity: 0.6;
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     color: white;
     border: none;
-    padding: 1.2rem 2rem;
-    border-radius: 48px;
-    font-size: 1.3rem;
+    padding: 1rem 1.5rem;
+    border-radius: 40px;
+    font-size: 1.2rem;
     cursor: pointer;
     width: 100%;
     transition: all 0.3s ease;
@@ -161,13 +164,13 @@ body {
 
 .loading {
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .loading p {
     color: var(--text-light);
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-style: italic;
 }
 
@@ -175,8 +178,8 @@ body {
     border: 3px solid var(--border);
     border-top: 3px solid var(--primary);
     border-radius: 50%;
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     animation: spin 0.8s linear infinite;
     margin: 0 auto 1rem;
 }
@@ -188,11 +191,12 @@ body {
 
 .resultado-section {
     background: #fefaf5;
-    border-radius: 28px;
-    padding: 2rem;
-    border-left: 5px solid var(--primary);
+    border-radius: 24px;
+    padding: 1.2rem;
+    border-left: 4px solid var(--primary);
     animation: fadeSlideUp 0.5s ease-out;
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
+    width: 100%;
 }
 
 @keyframes fadeSlideUp {
@@ -210,10 +214,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.2rem;
     flex-wrap: wrap;
-    gap: 1rem;
-    padding-bottom: 0.8rem;
+    gap: 0.8rem;
+    padding-bottom: 0.6rem;
     border-bottom: 1px solid var(--border);
 }
 
@@ -221,13 +225,13 @@ body {
     color: var(--primary);
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     letter-spacing: 0.5px;
 }
 
 .botones-accion {
     display: flex;
-    gap: 0.75rem;
+    gap: 0.6rem;
     flex-wrap: wrap;
 }
 
@@ -235,16 +239,16 @@ body {
     background: white;
     color: var(--text-light);
     border: 1px solid var(--border);
-    padding: 0.8rem 1.5rem;
-    border-radius: 48px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
     cursor: pointer;
     transition: all 0.2s ease;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
 
 .btn-copiar:hover {
@@ -266,22 +270,26 @@ body {
 
 .informe-contenido {
     background: white;
-    padding: 1.8rem;
-    border-radius: 24px;
+    padding: 1rem;
+    border-radius: 20px;
     border: 1px solid var(--border);
     box-shadow: inset 0 0 0 1px rgba(139, 90, 43, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .informe-contenido pre {
     white-space: pre-wrap;
     word-wrap: break-word;
     font-family: 'Cormorant Garamond', 'Georgia', serif;
-    font-size: 1.35rem;
-    line-height: 1.85;
+    font-size: 1.2rem;
+    line-height: 1.75;
     color: var(--text);
     max-height: 70vh;
     overflow-y: auto;
-    padding: 0.5rem;
+    padding: 0.25rem;
+    width: 100%;
+    word-break: break-word;
 }
 
 .hidden {
@@ -291,18 +299,19 @@ body {
 /* Notificaciones */
 .notificacion {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
-    padding: 14px 28px;
-    border-radius: 48px;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 40px;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.9rem;
     z-index: 1000;
     animation: slideIn 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(8px);
+    max-width: calc(100% - 40px);
 }
 
 .notificacion-success {
@@ -332,77 +341,92 @@ body {
     }
 }
 
-/* Responsive */
+/* Responsive MÓVIL - mejorado */
 @media (max-width: 768px) {
     body {
-        padding: 12px;
+        padding: 10px;
         font-size: 18px;
     }
     
     .container {
         padding: 0;
+        width: 100%;
     }
     
     .main-content {
-        padding: 1.5rem;
+        padding: 1.2rem;
         border-radius: 28px;
     }
     
     .app-header h1 {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
     }
     
     .app-header p {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
         letter-spacing: 1px;
     }
     
     .app-header h2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     
     .input-section label {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     
     .input-section textarea {
-        font-size: 1.1rem;
-        padding: 1rem;
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+    
+    .input-section textarea::placeholder {
+        font-size: 0.95rem;
     }
     
     .btn-primary {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        padding: 0.9rem;
+    }
+    
+    .resultado-section {
         padding: 1rem;
+        margin-top: 1rem;
     }
     
     .resultado-header {
         flex-direction: column;
         align-items: stretch;
+        gap: 0.6rem;
     }
     
     .resultado-header h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        text-align: center;
     }
     
     .botones-accion {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         width: 100%;
+        gap: 0.8rem;
     }
     
     .btn-copiar, .btn-compartir {
-        width: 100%;
+        flex: 1;
         justify-content: center;
-        padding: 0.8rem;
-        font-size: 1rem;
+        padding: 0.7rem;
+        font-size: 0.9rem;
     }
     
     .informe-contenido {
-        padding: 1rem;
+        padding: 0.8rem;
     }
     
     .informe-contenido pre {
-        font-size: 1.1rem;
-        line-height: 1.7;
+        font-size: 1rem;
+        line-height: 1.65;
+        padding: 0;
     }
     
     .notificacion {
@@ -410,7 +434,41 @@ body {
         right: 16px;
         left: 16px;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        max-width: none;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles compactos) */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .app-header h1 {
+        font-size: 2rem;
+    }
+    
+    .app-header h2 {
+        font-size: 1rem;
+    }
+    
+    .botones-accion {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .btn-copiar, .btn-compartir {
+        width: 100%;
+    }
+    
+    .informe-contenido pre {
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 }
 
@@ -421,11 +479,11 @@ body {
     }
     
     .app-header h1 {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
     
     .informe-contenido pre {
-        font-size: 1.45rem;
-        line-height: 1.9;
+        font-size: 1.35rem;
+        line-height: 1.85;
     }
 }
