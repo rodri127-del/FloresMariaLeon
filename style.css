@@ -29,22 +29,22 @@ body {
     min-height: 100vh;
     padding: 20px;
     color: var(--text);
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 .app-header {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     color: var(--text);
 }
 
 .app-header h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
     letter-spacing: -0.5px;
@@ -58,8 +58,8 @@ body {
 .app-header p {
     font-family: 'Montserrat', 'Segoe UI', sans-serif;
     font-weight: 300;
-    letter-spacing: 2px;
-    font-size: 1.1rem;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
     text-transform: uppercase;
     color: var(--text-light);
     margin-top: 0.25rem;
@@ -69,7 +69,7 @@ body {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-top: 0.75rem;
     color: var(--primary);
     opacity: 0.9;
@@ -78,7 +78,7 @@ body {
 .main-content {
     background: var(--background-light);
     border-radius: 32px;
-    padding: 2rem;
+    padding: 2.5rem;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
     transition: box-shadow 0.3s ease;
@@ -94,22 +94,22 @@ body {
 
 .input-section label {
     display: block;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     font-weight: 500;
     color: var(--text);
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.5px;
 }
 
 .input-section textarea {
     width: 100%;
-    padding: 1rem 1.25rem;
+    padding: 1.2rem 1.5rem;
     border: 1px solid var(--border);
-    border-radius: 24px;
-    font-size: 1.2rem;
+    border-radius: 28px;
+    font-size: 1.3rem;
     resize: vertical;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     transition: all 0.3s ease;
     font-family: 'Cormorant Garamond', serif;
     background: white;
@@ -127,16 +127,16 @@ body {
     color: var(--text-light);
     opacity: 0.6;
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     color: white;
     border: none;
-    padding: 1rem 2rem;
-    border-radius: 40px;
-    font-size: 1.2rem;
+    padding: 1.2rem 2rem;
+    border-radius: 48px;
+    font-size: 1.3rem;
     cursor: pointer;
     width: 100%;
     transition: all 0.3s ease;
@@ -167,7 +167,7 @@ body {
 .loading p {
     color: var(--text-light);
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-style: italic;
 }
 
@@ -175,8 +175,8 @@ body {
     border: 3px solid var(--border);
     border-top: 3px solid var(--primary);
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     animation: spin 0.8s linear infinite;
     margin: 0 auto 1rem;
 }
@@ -188,11 +188,11 @@ body {
 
 .resultado-section {
     background: #fefaf5;
-    border-radius: 24px;
-    padding: 1.5rem;
-    border-left: 4px solid var(--primary);
+    border-radius: 28px;
+    padding: 2rem;
+    border-left: 5px solid var(--primary);
     animation: fadeSlideUp 0.5s ease-out;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 @keyframes fadeSlideUp {
@@ -210,10 +210,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     flex-wrap: wrap;
     gap: 1rem;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.8rem;
     border-bottom: 1px solid var(--border);
 }
 
@@ -221,7 +221,7 @@ body {
     color: var(--primary);
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     letter-spacing: 0.5px;
 }
 
@@ -235,11 +235,11 @@ body {
     background: white;
     color: var(--text-light);
     border: 1px solid var(--border);
-    padding: 0.7rem 1.4rem;
-    border-radius: 40px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 48px;
     cursor: pointer;
     transition: all 0.2s ease;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     display: inline-flex;
@@ -266,8 +266,8 @@ body {
 
 .informe-contenido {
     background: white;
-    padding: 1.5rem;
-    border-radius: 20px;
+    padding: 1.8rem;
+    border-radius: 24px;
     border: 1px solid var(--border);
     box-shadow: inset 0 0 0 1px rgba(139, 90, 43, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02);
 }
@@ -276,8 +276,8 @@ body {
     white-space: pre-wrap;
     word-wrap: break-word;
     font-family: 'Cormorant Garamond', 'Georgia', serif;
-    font-size: 1.25rem;
-    line-height: 1.8;
+    font-size: 1.35rem;
+    line-height: 1.85;
     color: var(--text);
     max-height: 70vh;
     overflow-y: auto;
@@ -293,8 +293,8 @@ body {
     position: fixed;
     bottom: 24px;
     right: 24px;
-    padding: 12px 24px;
-    border-radius: 40px;
+    padding: 14px 28px;
+    border-radius: 48px;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -344,30 +344,44 @@ body {
     }
     
     .main-content {
-        padding: 1.25rem;
-        border-radius: 24px;
+        padding: 1.5rem;
+        border-radius: 28px;
     }
     
     .app-header h1 {
-        font-size: 2.4rem;
+        font-size: 2.6rem;
     }
     
     .app-header p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         letter-spacing: 1px;
     }
     
     .app-header h2 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    }
+    
+    .input-section label {
+        font-size: 1rem;
     }
     
     .input-section textarea {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+    
+    .btn-primary {
+        font-size: 1.1rem;
+        padding: 1rem;
     }
     
     .resultado-header {
         flex-direction: column;
         align-items: stretch;
+    }
+    
+    .resultado-header h3 {
+        font-size: 1.2rem;
     }
     
     .botones-accion {
@@ -379,6 +393,11 @@ body {
         width: 100%;
         justify-content: center;
         padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .informe-contenido {
+        padding: 1rem;
     }
     
     .informe-contenido pre {
@@ -398,15 +417,15 @@ body {
 /* Pantallas grandes */
 @media (min-width: 1400px) {
     .container {
-        max-width: 1100px;
-    }
-    
-    .informe-contenido pre {
-        font-size: 1.3rem;
-        line-height: 1.8;
+        max-width: 1200px;
     }
     
     .app-header h1 {
-        font-size: 3.8rem;
+        font-size: 4.5rem;
+    }
+    
+    .informe-contenido pre {
+        font-size: 1.45rem;
+        line-height: 1.9;
     }
 }
