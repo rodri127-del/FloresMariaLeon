@@ -78,12 +78,12 @@ class FloresBachApp {
         }
     }
 
-    mostrarResultado(informe) {
+    mostrarResultado(output) {
         const resultadoDiv = document.getElementById('resultado');
         const textoResultado = document.getElementById('texto-resultado');
         
         if (textoResultado) {
-            textoResultado.textContent = informe;
+            textoResultado.textContent = output;
         }
         
         if (resultadoDiv) {
