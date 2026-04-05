@@ -1,6 +1,6 @@
 class FloresBachApp {
     constructor() {
-        this.apiUrl = 'https://n8n.novaproflow.com/webhook-test/flores-bach';
+        this.apiUrl = 'https://n8n.novaproflow.com/webhook/flores-bach';
         this.init();
     }
 
