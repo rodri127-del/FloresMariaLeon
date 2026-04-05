@@ -59,11 +59,11 @@ class FloresBachApp {
                 throw new Error(data.error);
             }
 
-            if (!data.informe) {
+            if (!data.output) {
                 throw new Error('La respuesta no contiene un informe válido');
             }
 
-            this.mostrarResultado(data.informe);
+            this.mostrarResultado(data.output);
             this.mostrarNotificacion('✨ Informe generado con cariño', 'success');
             
         } catch (error) {
