@@ -5,6 +5,8 @@ class FloresBachApp {
     }
 
     init() {
+        this.inicializarFlores();
+        
         const generarBtn = document.getElementById('generar-btn');
         if (generarBtn) {
             generarBtn.addEventListener('click', () => this.generarInforme());
@@ -21,18 +23,41 @@ class FloresBachApp {
         }
     }
 
-    async generarInforme() {
-        const floresInput = document.getElementById('flores-input').value.trim();
-        
-        if (!floresInput) {
-            this.mostrarNotificacion('🌿 Por favor, introduce al menos una flor', 'warning');
-            return;
-        }
+    inicializarFlores() {
+        const floresBach = [
+            "Agrimony", "Aspen", "Beech", "Centaury", "Cerato", "Cherry Plum", "Chestnut Bud",
+            "Chicory", "Clematis", "Crab Apple", "Elm", "Gentian", "Gorse", "Heather",
+            "Holly", "Honeysuckle", "Hornbeam", "Impatiens", "Larch", "Mimulus", "Mustard",
+            "Oak", "Olive", "Pine", "Red Chestnut", "Rescue Remedy", "Rock Rose", "Rock Water",
+            "Scleranthus", "Star of Bethlehem", "Sweet Chestnut", "Vervain", "Vine", "Walnut",
+            "Water Violet", "White Chestnut", "Wild Oat", "Wild Rose", "Willow"
+        ];
 
-        const floresArray = floresInput.split(',').map(f => f.trim()).filter(f => f);
+        const grid = document.getElementById('flores-grid');
+        if (!grid) return;
+
+        floresBach.forEach(flor => {
+            const btn = document.createElement('button');
+            btn.className = 'flor-btn';
+            btn.textContent = flor;
+            btn.type = 'button';
+            
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('seleccionada');
+            });
+
+            grid.appendChild(btn);
+        });
+    }
+
+    async generarInforme() {
+        const botonesSeleccionados = document.querySelectorAll('.flor-btn.seleccionada');
+        
+        // Remove the checkmark character added via CSS textContent if it exists, or just use regular text content since ::before doesn't affect standard textContent
+        const floresArray = Array.from(botonesSeleccionados).map(btn => btn.textContent.trim());
         
         if (floresArray.length === 0) {
-            this.mostrarNotificacion('🌿 Formato incorrecto. Usa comas para separar las flores', 'warning');
+            this.mostrarNotificacion('🌿 Por favor, selecciona al menos una flor', 'warning');
             return;
         }
 
